@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tech Blog Website – Frontend Technical Assessment
 
-## Getting Started
+## Live Demo
 
-First, run the development server:
+https://tech-blog-alpha-kohl.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## GitHub Repository
+
+https://github.com/sumanpatra2022/tech-blog
+
+---
+
+## Overview
+
+A fast, SEO-optimized tech blog built with Next.js App Router, TypeScript and Tailwind CSS.  
+The application fetches blog posts from an external API and provides search, category filtering, and modal article view.
+
+---
+
+## Implemented Features
+
+### Core Features
+
+- Fetch exactly 10 blog posts from provided API
+- Search across title, description and content_text
+- Category filter with combined search + filter logic
+- Article modal with ESC / outside click / close button
+- Fully responsive layout
+
+### SEO Implementation
+
+- Meta tags, OpenGraph & Twitter cards
+- JSON-LD schema
+- robots.txt
+- sitemap.xml
+- Semantic HTML
+- Next Image optimization
+
+### Performance
+
+- Static generation with revalidation
+- Server components for data fetching
+- Optimized images
+
+---
+
+## Search & Filter Logic
+
+```ts
+const matchSearch =
+  title.includes(query) ||
+  description.includes(query) ||
+  content_text.includes(query);
+
+const matchCategory = category === "all" || blog.category === category;
+
+return matchSearch && matchCategory;
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Running Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+### Build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Author
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Suman Patra**  
+GitHub: https://github.com/sumanpatra2022
