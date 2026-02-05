@@ -23,7 +23,7 @@ import SeoSchema from "@/components/SeoSchema";
 //   },
 // };
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-vercel-url.vercel.app"),
+  metadataBase: new URL("https://tech-blog-alpha-kohl.vercel.app"),
 
   title: "Tech Blog – Modern Articles",
 

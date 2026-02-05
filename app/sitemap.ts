@@ -3,9 +3,10 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://your-vercel-url.vercel.app",
+      url: "https://tech-blog-alpha-kohl.vercel.app",
       lastModified: new Date(),
       priority: 1.0,
     },
   ];
 }
+
